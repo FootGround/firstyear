@@ -1,141 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstYear | Parents Blog</title>
-  <link rel="stylesheet" href="../styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstYear | Parenting Blog</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional Blog-specific styles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background-color: var(--light-bg);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .categories {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .category-tag {
+            padding: 0.5rem 1rem;
+            background-color: var(--light-bg);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .category-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <h1>FirstYear | Parents Blog</h1>
-    <h2>A companion for new parents</h2>
-    <nav>
-        <a href="../index.html">Home</a>
-        <a href="parents.html">Parents</a>
-        <a href="product-details.html">Shop</a>
-        <a href="blog.html">Blog</a>
-      </nav>
-  </header>
-  <main>
-    <section>
-      <h3>Decoding Baby Cries: What Your Little One Is Trying to Tell You</h3>
-      <p>The first few months of parenthood are a whirlwind of new experiences, and one of the most puzzling can be deciphering your baby's cries. It's like they're speaking a language you don't yet understand. This post aims to be your Rosetta Stone, helping you decode those cries, understand your baby's needs, and respond effectively, building a stronger bond between you and your little one.</p>
-      <p><b>The Hunger Cry:</b> This is often a rhythmic, repetitive cry that starts low and gradually increases in intensity. It may be accompanied by rooting (turning their head and opening their mouth when their cheek is touched), lip-smacking, or sucking on their fingers. Example: Imagine a steady "neh neh neh" sound that gets louder and more urgent.
-        <b>The Discomfort Cry (Wet Diaper/Gas):</b> This cry can be more fussy and intermittent. It might be accompanied by squirming, arching their back, or pulling their legs up to their tummy. Example: A whiny "eh eh eh" sound, punctuated by short bursts of louder crying. For gas, the crying might be more intense and sudden.
-        <b>The Tired Cry:</b> This cry is often whiny and less intense than the hunger cry. It might be accompanied by yawning, rubbing their eyes, or fussiness. Example: A soft, drawn-out "ow ow ow" sound, almost like a moan.
-        <b>The Overstimulated Cry:</b> This cry can be high-pitched and frantic. The baby may turn away from stimulation, clench their fists, or have jerky movements. Example: A sharp, piercing "eee eee eee" sound.
-       <b>The Need for Comfort Cry: </b>This cry can be a mix of whines and whimpers. The baby may reach out for you or look around for you. Example: A pleading "wah wah wah" sound, often with pauses.
-       <br>
-        <h4>Responding to Cries: A Step-by-Step Approach:</h4>
-        <b>Check the basics: </b>Is the baby hungry? Do they need a diaper change? Are they too hot or too cold?
-        <b>Offer comfort:</b> Try holding, rocking, swaddling, or offering a pacifier.
-        <b>Reduce stimulation: </b>If the baby seems overstimulated, take them to a quiet, dimly lit room.
-        <b>Try different positions: </b>Sometimes changing the baby's position can help relieve gas or discomfort.
-        <b>Trust your instincts: </b>You know your baby best. If you feel like something is wrong, trust your gut and consult with your pediatrician.
-        <b>When to Seek Help: </b>While most crying is normal, there are times when it's important to seek medical advice. Contact your pediatrician if your baby is:
-        Crying inconsolably for extended periods. 
-        Running a fever.
-        Refusing to feed or showing signs of dehydration.
-        Experiencing changes in their bowel movements or sleep patterns.
-        <br>Learning to understand your baby's cries takes time and patience. Don't be discouraged if you don't get it right away. The most important thing is to be responsive and attentive to your baby's needs. Remember, you're not alone in this journey.
-      </p>
-    </section>
-    <section>
-        <h2>Physical Recovery for Moms</h2>
+    <header>
+        <div class="container header-content">
+            <a href="../index.html" class="logo">FirstYear Life</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="parents.html">Parents</a>
+                <a href="../about.html">About</a>
+            </nav>
+        </div>
+    </header>
 
-<h3>Postpartum Bleeding (Lochia)</h3>
-<p>Lochia is the vaginal discharge you experience after giving birth. It starts out heavy and red, similar to a heavy period, and gradually lightens in color and flow over several weeks (typically 4-6 weeks).</p>
-<p><strong>When to be concerned:</strong> Soaking more than one pad per hour, passing large clots (larger than a golf ball), foul-smelling discharge, or experiencing increased bleeding after it has started to lighten. These could be signs of infection or retained placental tissue and require immediate medical attention.</p>
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Parenting Blog</h1>
+                <p class="hero-subtitle">Expert advice, real stories, and practical tips for your parenting journey</p>
+            </div>
+        </section>
 
-<h3>Perineal Care (for vaginal deliveries)</h3>
-<p>If you had a vaginal delivery, you may experience perineal tearing or an episiotomy.</p>
-<p><strong>Tips for healing:</strong></p>
-<ul>
-    <li><strong>Sitz baths:</strong> Soak the perineal area in warm water for 15-20 minutes several times a day.</li>
-    <li><strong>Ice packs:</strong> Apply ice packs to the area for 20 minutes at a time, several times a day, to reduce swelling and pain.</li>
-    <li><strong>Pain relief medication:</strong> Over-the-counter pain relievers like ibuprofen or acetaminophen can help manage pain. Your doctor may prescribe stronger pain medication if needed.</li>
-    <li><strong>Witch hazel pads:</strong> These can help soothe irritated tissues.</li>
-    <li><strong>Avoid strenuous activity:</strong> Rest as much as possible and avoid strenuous exercise or heavy lifting until your doctor clears you.</li>
-</ul>
+        <section class="container">
+            <div class="categories">
+                <span class="category-tag">All Posts</span>
+                <span class="category-tag">Development Milestones</span>
+                <span class="category-tag">Sleep Tips</span>
+                <span class="category-tag">Nutrition</span>
+                <span class="category-tag">Self-Care</span>
+                <span class="category-tag">Expert Advice</span>
+            </div>
 
-<h3>Cesarean Section Recovery</h3>
-<p>Recovery from a C-section is major abdominal surgery.</p>
-<p><strong>Key aspects:</strong></p>
-<ul>
-    <li><strong>Wound care:</strong> Keep the incision clean and dry, following your doctor's instructions. Watch for signs of infection (redness, swelling, discharge).</li>
-    <li><strong>Pain management:</strong> You'll likely be prescribed pain medication. Take it as directed.</li>
-    <li><strong>Restricted activity:</strong> Avoid lifting anything heavier than your baby for several weeks.</li>
-    <li><strong>Gentle movement:</strong> Light walking can help prevent blood clots and promote healing.</li>
-</ul>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Baby sleeping peacefully">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Sleep Tips</span>
+                            <span>January 15, 2025</span>
+                        </div>
+                        <h3>Establishing Healthy Sleep Routines: A Month-by-Month Guide</h3>
+                        <p>Discover how to create and maintain sleep schedules that work for both you and your baby throughout their first year...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
 
-<h3>Nutrition and Hydration</h3>
-<p>Eating a balanced diet rich in fruits, vegetables, and protein is crucial for healing and energy. Staying hydrated is especially important if you're breastfeeding. Aim to drink plenty of water throughout the day.</p>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Baby reaching development milestone">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Development</span>
+                            <span>January 14, 2025</span>
+                        </div>
+                        <h3>Understanding Your Baby's Development: Month 3-6</h3>
+                        <p>Learn about the exciting milestones your baby will reach between months 3 and 6, and how you can support their development...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
 
-<h3>Rest and Sleep</h3>
-<p>This is often the most challenging aspect for new parents.</p>
-<p><strong>Strategies for maximizing rest:</strong></p>
-<ul>
-    <li><strong>Nap when the baby naps:</strong> Even short naps can make a difference.</li>
-    <li><strong>Share night duties with your partner:</strong> Take turns getting up with the baby for feedings or diaper changes.</li>
-    <li><strong>Accept help from family and friends:</strong> Don't be afraid to ask for help with meals, errands, or household chores.</li>
-</ul>
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Parent self-care moment">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Self-Care</span>
+                            <span>January 13, 2025</span>
+                        </div>
+                        <h3>Finding Time for Self-Care as a New Parent</h3>
+                        <p>Practical strategies for maintaining your well-being while caring for your little one. Learn how to balance it all...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
 
-<h2>Emotional Well-Being</h2>
+        <section class="container">
+            <div class="email-signup">
+                <h2>Stay Updated</h2>
+                <p>Get the latest parenting tips and advice delivered to your inbox</p>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter your email" class="email-input" required>
+                    <button type="submit" class="submit-button">Subscribe to Blog</button>
+                </form>
+            </div>
+        </section>
+    </main>
 
-<h3>Baby Blues vs. Postpartum Depression (PPD)</h3>
-<p>Baby blues are common and affect up to 80% of new mothers. They typically involve feelings of sadness, tearfulness, anxiety, and irritability that peak around day 3-5 after birth and resolve within two weeks. PPD is more severe and longer-lasting. Symptoms can include persistent sadness, hopelessness, loss of interest in activities, changes in appetite or sleep, feelings of guilt or worthlessness, and thoughts of harming yourself or your baby. It's crucial to seek professional help if you are experiencing symptoms of PPD.</p>
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 FirstYear.life</p>
+            <p><a href="../disclaimer.html">Disclaimer</a></p>
+        </div>
+    </footer>
 
-<h3>Hormonal Changes</h3>
-<p>The dramatic drop in hormones after birth contributes to mood changes.</p>
-
-<h3>Self-Care Strategies</h3>
-<ul>
-    <li><strong>Take short breaks:</strong> Even 5-10 minutes of alone time can be beneficial.</li>
-    <li><strong>Engage in relaxing activities:</strong> Take a warm bath, read a book, or listen to music.</li>
-    <li><strong>Connect with other new parents:</strong> Joining a support group or online forum can provide valuable support and connection.</li>
-    <li><strong>Get some fresh air and sunlight:</strong> Even a short walk can boost your mood.</li>
-</ul>
-
-<h3>Seeking Professional Support</h3>
-<p>If you are experiencing persistent sadness, anxiety, or other symptoms of PPD, please reach out to your healthcare provider or a mental health professional. You are not alone, and help is available.</p>
-
-<h2>Creating a Calming Environment for Baby</h2>
-
-<h3>Swaddling</h3>
-<p>Swaddling can help babies feel secure and contained, like they were in the womb.</p>
-<p><strong>Safe swaddling tips:</strong> Use a lightweight blanket, ensure the swaddle is snug but not too tight (baby should be able to move their hips), and stop swaddling once the baby starts showing signs of rolling over (usually around 2-3 months).</p>
-
-<h3>Skin-to-Skin Contact</h3>
-<p>Also known as kangaroo care, skin-to-skin contact involves placing your naked baby directly on your bare chest. This helps regulate their temperature, heart rate, and breathing, and promotes bonding.</p>
-
-<h3>White Noise</h3>
-<p>White noise can mask other sounds and create a calming environment for babies. You can use a white noise machine, a fan, or a white noise app.</p>
-
-<h3>Gentle Rocking and Movement</h3>
-<p>Gentle rocking, swaying, or walking can soothe babies.</p>
-
-<h3>Reducing Overstimulation</h3>
-<p>Newborns can easily become overstimulated by bright lights, loud noises, and lots of activity. Creating a calm and peaceful environment can help them relax and sleep better.</p>
-
-<h2>Establishing a Routine (But Staying Flexible)</h2>
-
-<h3>Feeding on Demand</h3>
-<p>This means feeding your baby whenever they show signs of hunger, such as rooting, lip-smacking, or fussiness.</p>
-
-<h3>Sleep Schedules (or Lack Thereof)</h3>
-<p>Newborns don't have a regular sleep schedule. They typically sleep for short periods throughout the day and night.</p>
-
-<h3>Importance of Flexibility</h3>
-<p>Be prepared to adjust your routine as your baby grows and changes.</p>
-
-<h2>Conclusion</h2>
-<p>The fourth trimester is a time of significant transition and growth for both you and your baby. Remember to be patient with yourselves, prioritize self-care, and seek support when needed. You've got this!</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Firstyear.life</p>
-    <p><a href="../disclaimer.html">Disclaimer</a></p>
-  </footer>
+    <script src="../script.js"></script>
 </body>
 </html>
