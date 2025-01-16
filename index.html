@@ -1,30 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Firstyear</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstYear | Your Guide to New Beginnings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>FirstYear Life</h1>
-    <h2>A companion for new <strong> beginnings</strong></h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="parents/parents.html">Parents</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Welcome to Firstyear</h2>
-      <p>Find resources for your first year in various fields, from parenting to hobbies!</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Firstyear.life</p>
-    <p><a href="disclaimer.html">Disclaimer</a></p>  
-  </footer>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">FirstYear Life</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="parents/parents.html">Parents</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Welcome to FirstYear</h1>
+                <p class="hero-subtitle">Jumpstart your new journey with expert guidance and daily support</p>
+                <a href="parents/parents.html" class="cta-button">Explore Parent Resources</a>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-day feature-icon"></i>
+                    <h3>Daily Support</h3>
+                    <p>Get expert guidance every day of your journey with our tear-away calendar.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-book-open feature-icon"></i>
+                    <h3>Expert Resources</h3>
+                    <p>Access comprehensive guides and articles.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-users feature-icon"></i>
+                    <h3>Community</h3>
+                    <p>Connect with others and share your experiences.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 FirstYear.life</p>
+            <p><a href="disclaimer.html">Disclaimer</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
