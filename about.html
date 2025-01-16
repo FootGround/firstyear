@@ -1,30 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FirstYear | About </title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstYear | About New Beginnings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <h1>FirstYear | About </h1>
-    <h2>A companion for new beginnings</h2>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="parents/parents.html">Parents</a>
-      <a href="about.html">About</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Our Mission</h2>
-      <p> <b></b>Starting something new can be exciting and overwhelming.</b> That's why we created FirstYear. We believe that everyone deserves the right tools and support to thrive in their first year. Our mission is to empower novices in all fields by providing carefully selected resources, innovative products designed to ease the transition, and a vibrant community where you can connect with others who are on the same journey. We're dedicated to helping you navigate the ups and downs, celebrate your milestones, and make the most of this transformative experience.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Firstyear.life</p>
-    <p><a href="disclaimer.html">Disclaimer</a></p>
-  </footer>
+    <header>
+        <div class="container header-content">
+            <a href="index.html" class="logo">FirstYear Life</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="parents/parents.html">Parents</a>
+                <a href="about.html">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">About FirstYear</h1>
+                <p class="hero-subtitle">Empowering Your New Beginnings</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-star feature-icon"></i>
+                    <h3>Our Mission</h3>
+                    <p>Every new journey begins with that first step. Whether you're becoming a parent, starting a business, learning a new skill, or embarking on any new adventure, the first year is crucial. We're here to make that year count.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-compass feature-icon"></i>
+                    <h3>Our Vision</h3>
+                    <p>We envision a world where everyone has the confidence and support to pursue their dreams. Your first year shouldn't be spent feeling lost or overwhelmed – it should be a time of growth, discovery, and achievement.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>Our Values</h3>
+                    <p>We believe in empowerment through knowledge, support through community, and success through daily progress. Every small step counts toward your bigger goals.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="testimonial-card">
+                <h2>Why FirstYear?</h2>
+                <p>Starting something new is both exciting and challenging. Whether you're:</p>
+                <ul class="mt-1 mb-2">
+                    <li>Taking your first steps into parenthood</li>
+                    <li>Learning a musical instrument</li>
+                    <li>Starting a new business</li>
+                    <li>Beginning a fitness journey</li>
+                    <li>Learning a new language</li>
+                    <li>Or embarking on any new adventure</li>
+                </ul>
+                <p>We provide the structure, guidance, and support you need to succeed. Our innovative tear-away calendars and resources are designed to break down your journey into manageable daily steps, celebrate your progress, and keep you motivated throughout your first year.</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="email-signup">
+                <h2>Join Our Community</h2>
+                <p>Get tips, inspiration, and updates for your journey</p>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter your email" class="email-input" required>
+                    <button type="submit" class="submit-button">Stay Connected</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 FirstYear.life</p>
+            <p><a href="disclaimer.html">Disclaimer</a></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
