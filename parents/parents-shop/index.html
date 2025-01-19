@@ -5,10 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FirstYear | Daily Parent Calendar</title>
     <meta name="description" content="Transform your parenting journey with our expertly crafted daily tear-away calendar. Get daily tips, milestone tracking, and encouragement for new parents.">
-    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="/styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Only adding minimal styles needed for preview functionality */
         .preview-modal {
             display: none;
             position: fixed;
@@ -64,20 +63,21 @@
     </style>
 </head>
 <body>
-  <header>
-    <div class="container header-content">
-        <a href="../../" class="logo">FirstYear | Parents</a>
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <i class="fas fa-bars"></i>
-        </button>
-        <nav>
-            <a href="../../">Home</a>
-            <a href="../parents">Parents</a>
-            <a href="/">Shop</a>
-            <a href="../../about">About</a>
-        </nav>
-    </div>
-  </header>
+    <header>
+        <div class="container header-content">
+            <a href="/" class="logo">FirstYear Life</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="/">Home</a>
+                <a href="/parents">Parents</a>
+                <a href="/parents/parents-shop" aria-current="page">Shop</a>
+                <a href="/parents/blog">Blog</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section class="hero-section">
@@ -170,21 +170,21 @@
     <footer>
         <div class="container text-center">
             <p>&copy; 2025 FirstYear.life</p>
-            <p><a href="../../disclaimer">Disclaimer</a></p>
+            <p><a href="/disclaimer">Disclaimer</a></p>
         </div>
     </footer>
 
-    <script src="../../script.js"></script>
+    <script src="/script.js"></script>
     <script>
         // Preview functionality
         function openPreview() {
             document.getElementById('previewModal').style.display = 'block';
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            document.body.style.overflow = 'hidden';
         }
 
         function closePreview() {
             document.getElementById('previewModal').style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
+            document.body.style.overflow = 'auto';
         }
 
         // Close modal when clicking outside
