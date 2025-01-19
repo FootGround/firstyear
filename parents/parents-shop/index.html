@@ -65,15 +65,15 @@
 <body>
     <header>
         <div class="container header-content">
-            <a href="/" class="logo">FirstYear Life</a>
+            <a href="../../" class="logo">FirstYear Life</a>
             <button class="nav-toggle" aria-label="Toggle navigation">
                 <i class="fas fa-bars"></i>
             </button>
             <nav>
-                <a href="/">Home</a>
-                <a href="../parents">Parents</a>
-                <a href="/" aria-current="page">Shop</a>
-                <a href="../parents/blog">Blog</a>
+                <a href="../../">Home</a>
+                <a href="../../parents">Parents</a>
+                <a href="../parents-shop" aria-current="page">Shop</a>
+                <a href="../blog">Blog</a>
                 <a href="../../about">About</a>
             </nav>
         </div>
@@ -95,8 +95,8 @@
                     <p class="price-tag">$29.99</p>
                     <button class="cta-button preview-button" onclick="openPreview()">Preview Sample Pages</button>
                     <div class="mt-2">
-                        <a href="https://shopify.com/your-store" target="_blank" class="cta-button">Shop on Shopify</a>
-                        <a href="https://etsy.com/your-store" target="_blank" class="cta-button">Shop on Etsy</a>
+                        <a href="https://shopify.com/your-store" target="_blank" rel="noopener" class="cta-button">Shop on Shopify</a>
+                        <a href="https://etsy.com/your-store" target="_blank" rel="noopener" class="cta-button">Shop on Etsy</a>
                     </div>
                 </div>
             </div>
@@ -128,7 +128,7 @@
             <div class="email-signup">
                 <h2>Get a Free Preview</h2>
                 <p>Sign up to receive sample pages and exclusive offers!</p>
-                <form class="email-form">
+                <form class="email-form" id="previewForm">
                     <input type="email" placeholder="Enter your email" class="email-input" required>
                     <button type="submit" class="submit-button">Get Free Preview</button>
                 </form>
@@ -170,7 +170,7 @@
     <footer>
         <div class="container text-center">
             <p>&copy; 2025 FirstYear.life</p>
-            <p><a href="/disclaimer">Disclaimer</a></p>
+            <p><a href="../../disclaimer">Disclaimer</a></p>
         </div>
     </footer>
 
@@ -200,6 +200,13 @@
             if (event.key === 'Escape') {
                 closePreview();
             }
+        });
+
+        // Form handling
+        document.getElementById('previewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Check your email for your free preview.');
+            this.reset();
         });
     </script>
 </body>
