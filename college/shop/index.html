@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstYear | Daily College Calendar</title>
+    <meta name="description" content="Transform your college journey with our expertly crafted daily tear-away calendar. Get daily tips, milestone tracking, and encouragement for new college students.">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        .preview-content {
+            background-color: var(--light-bg);
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 2rem;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .close-preview {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+
+        .preview-page {
+            background: white;
+            padding: 2rem;
+            margin: 1rem 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .preview-button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        .preview-button:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../../" class="logo">FirstYear Life | College</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="../../college">College</a>
+                <a href="../blog">Blog</a>
+                <a href="/" aria-current="page">Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Daily College Calendar</h1>
+                <p class="hero-subtitle">Your Day-by-Day Guide Through the First Year of College</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <img src="/api/placeholder/400/400" alt="Daily College Calendar" class="product-image">
+                    <h2>Transform Your College Journey</h2>
+                    <p class="price-tag">$29.99</p>
+                    <button class="cta-button preview-button" onclick="openPreview()">Preview Sample Pages</button>
+                    <div class="mt-2">
+                        <a href="https://shopify.com/your-store" target="_blank" rel="noopener" class="cta-button">Shop on Shopify</a>
+                        <a href="https://etsy.com/your-store" target="_blank" rel="noopener" class="cta-button">Shop on Etsy</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-calendar-day feature-icon"></i>
+                    <h3>Daily Expert Tips</h3>
+                    <p>Get curated advice from graduates and experienced education experts.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-chart-line feature-icon"></i>
+                    <h3>Milestone Tracking</h3>
+                    <p>Never miss important developmental milestones with our guidelines.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart feature-icon"></i>
+                    <h3>Daily Encouragement</h3>
+                    <p>Start each day with inspiring messages and reminders.</p>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <h3>Success Story</h3>
+                <p>"The FirstYear calendar was my daily companion during those challenging early months. Each day provided a new tip, milestone reminder, or piece of encouragement. It was a lifesaver!"</p>
+                <p><strong>- Maria, college double major from an Ivy Leagues</strong></p>
+            </div>
+
+            <div class="email-signup">
+                <h2>Get a Free Preview</h2>
+                <p>Sign up to receive sample pages and exclusive offers!</p>
+                <form class="email-form" id="previewForm">
+                    <input type="email" placeholder="Enter your email" class="email-input" required>
+                    <button type="submit" class="submit-button">Get Free Preview</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Preview Modal -->
+    <div id="previewModal" class="preview-modal">
+        <div class="preview-content">
+            <span class="close-preview" onclick="closePreview()">&times;</span>
+            <h2>Sample Calendar Pages</h2>
+            
+            <div class="preview-page">
+                <h3>Day 1: Welcome to College!</h3>
+                <p><strong>Tip of the Day:</strong> Take it one moment at a time. Update message here.</p>
+                <p><strong>Milestone Watch:</strong> Update message here.</p>
+                <p><strong>Self-Care Reminder:</strong> Accept help when it's offered - you don't have to do this alone.</p>
+            </div>
+
+            <div class="preview-page">
+                <h3>Day 7: First Week Milestone</h3>
+                <p><strong>Tip of the Day:</strong> Your baby's umbilical cord stump will fall off around this time. Keep the area clean and dry.</p>
+                <p><strong>Development Note:</strong> Your baby may turn their head toward familiar sounds and voices.</p>
+                <p><strong>Study Reminder:</strong> You're doing great! Every baby is different, and you're learning together.</p>
+            </div>
+
+            <div class="preview-page">
+                <h3>Day 30: One Month Achievement</h3>
+                <p><strong>Tip of the Day:</strong> Your baby might start making eye contact and responding to faces.</p>
+                <p><strong>Activity Suggestion:</strong> Try simple face-to-face interactions during alert periods.</p>
+                <p><strong>Wellness Check:</strong> Schedule your baby's 1-month pediatrician visit if you haven't already.</p>
+            </div>
+
+            <button class="cta-button" onclick="closePreview()">Close Preview</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 FirstYear.life</p>
+            <p><a href="../../disclaimer">Disclaimer</a></p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+    <script>
+        // Preview functionality
+        function openPreview() {
+            document.getElementById('previewModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closePreview() {
+            document.getElementById('previewModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            const modal = document.getElementById('previewModal');
+            if (event.target == modal) {
+                closePreview();
+            }
+        }
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closePreview();
+            }
+        });
+
+        // Form handling
+        document.getElementById('previewForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you! Check your email for your free preview.');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
