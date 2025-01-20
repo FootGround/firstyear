@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FirstYear | Marriage Blog</title>
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        /* Additional Blog-specific styles */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .blog-image {
+            width: 100%;
+            height: 200px;
+            background-color: var(--light-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .blog-content {
+            padding: 1.5rem;
+        }
+
+        .blog-meta {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .blog-tag {
+            display: inline-block;
+            padding: 0.2rem 0.8rem;
+            background-color: var(--light-bg);
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-right: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 1rem;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        .categories {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin: 1rem 0;
+        }
+
+        .category-tag {
+            padding: 0.5rem 1rem;
+            background-color: var(--light-bg);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .category-tag:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="../../" class="logo">FirstYear | Married</a>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <a href="../../married">Married</a>
+                <a href="/blog">Blog</a>
+                <a href="../shop">Shop</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container">
+                <h1 class="hero-title">Marriage Blog</h1>
+                <p class="hero-subtitle">Expert advice, real stories, and practical tips for your marriage journey</p>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="categories">
+                <span class="category-tag">All Posts</span>
+                <span class="category-tag">Development Milestones</span>
+                <span class="category-tag">Sleep Tips</span>
+                <span class="category-tag">Nutrition</span>
+                <span class="category-tag">Self-Care</span>
+                <span class="category-tag">Expert Advice</span>
+            </div>
+
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Baby sleeping peacefully">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Sleep Tips</span>
+                            <span>January 15, 2025</span>
+                        </div>
+                        <h3>Establishing Healthy Sleep Routines: A Month-by-Month Guide</h3>
+                        <p>Discover how to create and maintain sleep schedules that work for both you and your baby throughout their first year...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Baby reaching development milestone">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Development</span>
+                            <span>January 14, 2025</span>
+                        </div>
+                        <h3>Understanding Your Baby's Development: Month 3-6</h3>
+                        <p>Learn about the exciting milestones your baby will reach between months 3 and 6, and how you can support their development...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+
+                <article class="blog-card">
+                    <div class="blog-image">
+                        <img src="/api/placeholder/600/400" alt="Marriage self-care moment">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-meta">
+                            <span class="blog-tag">Self-Care</span>
+                            <span>January 13, 2025</span>
+                        </div>
+                        <h3>Finding Time for Self-Care as a Newly Married Person</h3>
+                        <p>Practical strategies for maintaining your well-being while caring for your little one. Learn how to balance it all...</p>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="email-signup">
+                <h2>Stay Updated</h2>
+                <p>Get the latest marriage tips and advice delivered to your inbox</p>
+                <form class="email-form">
+                    <input type="email" placeholder="Enter your email" class="email-input" required>
+                    <button type="submit" class="submit-button">Subscribe to Blog</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2025 FirstYear.life</p>
+            <p><a href="../../disclaimer">Disclaimer</a></p>
+        </div>
+    </footer>
+
+    <script src="../../script.js"></script>
+</body>
+</html>
